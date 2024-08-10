@@ -1,0 +1,55 @@
+<!-- https://www.youtube.com/watch?v=ckjRsPaWHX8 and https://www.youtube.com/watch?v=MM9FAV_CEkU&t=0s-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maltese Wordle</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-cartesian.min.js"></script>
+
+    <script src="./data/words/frequency.json"></script>
+    <script src="./data/solution/FrequencyExplore.json"></script>
+    <script src="utilities.js"></script>
+    <script src="wordle.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <a class="disable-select" onclick="restart(true)">⟳</a>
+        <a class="disable-select" onclick="restart()">Next Word</a>
+        <a class="disable-select" onclick="solution()">Solution</a>
+        <a id="insane" class="disable-select" onclick="insane()">Insane Mode</a>
+        <a id="dark-mode" class="disable-select" onclick="dark_mode()">☀</a>
+        <!-- <a id="helper" class="disable-select" onclick="showstats()">Helper</a> -->
+    </div>
+
+    <h1>
+        <div id="title">Maltese Wordle</div>
+    </h1>
+    <hr>
+    
+    <div id="popup"></div>
+
+    <div class="row">
+        <div class="column left">
+            <div id="stats">
+                test
+            </div>
+        </div>
+        <div class="column middle">
+            <div id="game"></div>
+        </div>
+        <div class="column right">
+            <div id="solver">
+                <div><button onclick="solve_once(frequency_explore)">Show tree solution</button></div>
+                <!-- <div><button onclick="solve_once(word_trees_freq)">Solver with letter frequencies</button></div> -->
+            </div>
+        </div>
+    </div>
+
+    <h1 id="answer"></h1>
+</body>
+</html>

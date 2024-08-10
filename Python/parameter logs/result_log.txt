@@ -1,0 +1,208 @@
+Average rounds of true random play = 2.8  and games completed: 0.005
+Average rounds of random play with word filtering = 4.157245632065776  and games completed: 0.973
+Average rounds of frequency play with word filtering = 3.9224572004028198  and games completed: 0.993
+Average rounds of explore play with better word filtering = 5.0  and games completed: 0.98
+Average rounds of better explore play with better word filtering = 5.0  and games completed: 0.987
+Average rounds of frequency play with word filtering and considering word frequencies in corpus = 4.0213631739572735  and games completed: 0.983
+ 
+For the strategy:
+It was either storing all the words with their respective patterns and respective word bags
+It was also possible to somehow manage to define the words in a more general and non-unique way to simply the whole process.
+
+10k, round 1
+3.409506852178458 0.5925780867521786
+
+Full successful explore
+3.4334029009163856 0.57818653347421
+
+
+Sample:
+2k words
+Using the successful explore:
+12.875128269195557
+3.097650568464622 0.8570019723865878
+
+Using letters_in <= 4 round <=3, full explore (only concluded):
+12.905412673950195
+3.063837711044593 0.8687268232385661
+
+Using letters_in <=5 round <=3, full explore (only concluded):
+	14.081615686416626
+3.0677747189186086 0.880019831432821
+
+Using letters_in <=5 round <=4, full explore (only concluded):
+	15.732647180557251
+3.0874452148980285 0.8281172379533035
+
+Using letters_in <=5 round <=3, full explore (avoiding perfects):
+	23.35484480857849
+3.2176590803331044 0.7837969741337237
+
+Using letters_in <=5 round <=3, full explore (avoiding perfects and increasing letter occurance):
+	16.872546911239624
+3.050853776834638 0.9000989119683481
+
+Using letters_in <=5 round <=3, full explore (avoiding perfects and increasing letter occurrence, removing unique boosting):
+	81.0261242389679
+3.2802005195365713 0.6352684717760441
+
+Using letters_in <=5 round <=3, full explore (concluded, avoiding perfects and increasing letter occurrence, removing unique boosting):
+	13.850926160812378
+3.171278472352627 0.8901970206631428
+
+Using letters_in <=5 round <=3, full explore (concluded, avoiding perfects and increasing letter occurrence, removing unique boosting, weights: 2, 1, 1):
+	13.850926160812378
+3.171278472352627 0.8901970206631428
+
+Using letters_in <=5 round <=3, full explore (concluded, avoiding perfects and increasing letter occurrence, removing unique boosting, weights: 2 3 1):
+	15.2721266746521
+3.171189339128297 0.8895823331733077
+
+Full explore full:
+3.5861825150573754 0.5584164503347452
+
+Full explore only concluded:
+832.8496952056885
+3.553075037405428 0.5691600501462599
+
+Full explore everything:
+	2449.3534083366394
+3.58617406187133 0.5584126355196372
+
+Current word_list explore everything added rating with frequency picker:
+	5.9% winrate, 3.1 average guess
+	
+
+2k
+With the 3 extra being in unique:
+Average guess 3.102838896031727 Win ratio:  0.8755941648910015
+Time taken for function 'playBetterFrequencyFull'	Seconds: 52.23728609085083 	Minutes: 0.8706214348475139 	Hours: 0.014510357247458564
+
+With 3 extra being normal:
+Average guess 3.1934378134451338 Win ratio:  0.8499421965317919
+Time taken for function 'playBetterFrequencyFull'	Seconds: 43.819920778274536 	Minutes: 0.7303320129712423 	Hours: 0.012172200216187371
+
+With added available letters:
+Average guess 3.3774470289146703 Win ratio:  0.6740078952836069
+Time taken for function 'playBetterFrequencyFull'	Seconds: 44.37331819534302 	Minutes: 0.739555303255717 	Hours: 0.012325921720928616
+
+No adds:
+Average guess 3.37042351881227 Win ratio:  0.613888057467824
+Time taken for function 'playBetterFrequencyFull'	Seconds: 26.31564450263977 	Minutes: 0.43859407504399617 	Hours: 0.00730990125073327
+
+Back to unique:
+Average guess 3.4056635126849595 Win ratio:  0.576966610073571
+Time taken for function 'playBetterFrequencyFull'	Seconds: 24.310977697372437 	Minutes: 0.4051829616228739 	Hours: 0.006753049360381232
+
+Extra 0.5 strength:
+Average guess 3.22230627940873 Win ratio:  0.7672239108409321
+Time taken for function 'playBetterFrequencyFull'	Seconds: 36.951194763183594 	Minutes: 0.6158532460530599 	Hours: 0.010264220767550998
+
+Only first 2, 0.5 strength:
+Win ratio: 0.88
+2 and 2, 1 strength:
+Average guess 3.229527615589123 Win ratio:  0.714635340186001
+Time taken for function 'playBetterFrequencyFull'	Seconds: 37.97742557525635 	Minutes: 0.6329570929209392 	Hours: 0.010549284882015652
+
+Added concluded update in tree (only first 2 extras):
+Average guess 3.2292620731261197 Win ratio:  0.8168731168396385
+Time taken for function 'playBetterFrequencyFull'	Seconds: 33.55026626586914 	Minutes: 0.5591711044311524 	Hours: 0.009319518407185872
+
+Only concluded:
+Average guess 3.3066908572600884 Win ratio:  0.819883527454243
+Time taken for function 'playBetterFrequencyFull'	Seconds: 27.18229842185974 	Minutes: 0.4530383070309957 	Hours: 0.007550638450516595
+
+1.5 strength:
+Average guess 3.3351829467135645 Win ratio:  0.8093238135237295
+Time taken for function 'playBetterFrequencyFull'	Seconds: 25.91814112663269 	Minutes: 0.4319690187772115 	Hours: 0.007199483646286859
+
+Fixed order of pick_freq (removed unique from letter_freq):
+Average guess 3.031065112977573 Win ratio:  0.9272331154684096
+Time taken for function 'playBetterFrequencyFull'	Seconds: 26.11099410057068 	Minutes: 0.43518323500951134 	Hours: 0.0072530539168251884
+
+Added removing score for perfect letters:
+Average guess 3.031065112977573 Win ratio:  0.9272331154684096
+Time taken for function 'playBetterFrequencyFull'	Seconds: 25.777056455612183 	Minutes: 0.4296176075935364 	Hours: 0.007160293459892273
+
+Added checking if letter within available letters (score add):
+Average guess 3.157283930151636 Win ratio:  0.8259187620889749
+Time taken for function 'playBetterFrequencyFull'	Seconds: 32.26268172264099 	Minutes: 0.5377113620440165 	Hours: 0.008961856034066943
+
+Only first 3 extras:
+Average guess 3.0861761955250158 Win ratio:  0.9106049473426402
+Time taken for function 'playBetterFrequencyFull'	Seconds: 43.97740602493286 	Minutes: 0.7329567670822144 	Hours: 0.012215946118036907
+
+Known <= 5 and round <=4 (from <=3):
+Average guess 3.0310994899854817 Win ratio:  0.925893635571055
+Time taken for function 'playBetterFrequencyFull'	Seconds: 31.462849617004395 	Minutes: 0.5243808269500733 	Hours: 0.008739680449167887
+
+Full 20k:
+Average guess 3.642169061849561 Win ratio:  0.5465962143968731
+Time taken for function 'playBetterFrequencyFull'	Seconds: 3406.160885334015 	Minutes: 56.76934808890025 	Hours: 0.9461558014816708
+
+
+2k words parameters:
+Average guess 2.8367080305150982 Win ratio:  0.9473029045643153 Parameters: (0.5, 0.5, 0.5, 0.5, 0.5, 0)
+Average guess 2.8242974487419836 Win ratio:  0.900413617562838 Parameters: (0, 0.5, 0.5, 0.5, 0, 0)
+Average guess 2.923905818693156 Win ratio:  0.8413694721825963 Parameters: (0, 0.5, 0.5, 0, 0, 0.5)
+Average guess 2.9644758691746955 Win ratio:  0.674965034965035 Parameters: (0.5, 0.5, 0, 0, 0.5, 0.5)
+Average guess 2.9266151156277256 Win ratio:  0.866183574879227 Parameters: (0.5, 0, 0, 0, 0, 0)
+Average guess 2.9704322555805573 Win ratio:  0.6660533578656854 Parameters: (0, 0.5, 0, 0.5, 0.5, 0.5)
+Average guess 2.9133592389741523 Win ratio:  0.8037230568256042 Parameters: (0, 0.5, 0.5, 0.5, 0.5, 0.5)
+Average guess 2.9266151156277256 Win ratio:  0.866183574879227 Parameters: (0.5, 0, 0, 0, 0.5, 0)
+Average guess 2.965912472368598 Win ratio:  0.6577370461755375 Parameters: (0.5, 0.5, 0, 0.5, 0.5, 0.5)
+Average guess 2.2942129312204753 Win ratio:  0.865323435843054 Parameters: (0, 0, 0, 0.5, 0.5, 0.5)
+Average guess 2.8994971312001523 Win ratio:  0.8685168334849863 Parameters: (0.5, 0, 0.5, 0.5, 0.5, 0.5)
+Average guess 2.884016265970266 Win ratio:  0.8478077571669477 Parameters: (0.5, 0, 0.5, 0, 0, 0.5)
+Average guess 2.965912472368598 Win ratio:  0.6577370461755375 Parameters: (0.5, 0.5, 0, 0.5, 0, 0.5)
+Average guess 2.2881590309856144 Win ratio:  0.8173598553345389 Parameters: (0, 0, 0, 0, 0, 0.5)
+Average guess 2.754534763445822 Win ratio:  0.9474237644584648 Parameters: (0, 0, 0.5, 0, 0, 0)
+Average guess 2.9454958569355303 Win ratio:  0.7582685904550499 Parameters: (0, 0.5, 0, 0, 0, 0)
+Average guess 2.2942129312204753 Win ratio:  0.865323435843054 Parameters: (0, 0, 0, 0.5, 0, 0.5)
+Average guess 2.8994971312001523 Win ratio:  0.8685168334849863 Parameters: (0.5, 0, 0.5, 0.5, 0, 0.5)
+Average guess 2.913761070603756 Win ratio:  0.7846790890269151 Parameters: (0, 0, 0.5, 0.5, 0, 0.5)
+Average guess 2.754534763445822 Win ratio:  0.9474237644584648 Parameters: (0, 0, 0, 0.5, 0, 0)
+Average guess 2.8380926199785024 Win ratio:  0.9052402932392072 Parameters: (0, 0.5, 0.5, 0, 0.5, 0)
+Average guess 2.754534763445822 Win ratio:  0.9474237644584648 Parameters: (0, 0, 0, 0, 0, 0)
+Average guess 2.81638690618999 Win ratio:  0.9591111111111111 Parameters: (0.5, 0, 0.5, 0.5, 0.5, 0)
+Average guess 2.884016265970266 Win ratio:  0.8478077571669477 Parameters: (0.5, 0, 0.5, 0, 0.5, 0.5)
+Average guess 2.837095191978867 Win ratio:  0.7626788036410923 Parameters: (0.5, 0, 0, 0.5, 0, 0.5)
+Average guess 2.8579307472141124 Win ratio:  0.9254161331626121 Parameters: (0.5, 0.5, 0.5, 0, 0, 0)
+Average guess 2.820023472279537 Win ratio:  0.9730107026523964 Parameters: (0.5, 0, 0.5, 0, 0, 0)
+Average guess 2.9519944588196303 Win ratio:  0.8211046990931574 Parameters: (0.5, 0, 0, 0.5, 0, 0)
+Average guess 2.9031191012786137 Win ratio:  0.8402234636871508 Parameters: (0.5, 0.5, 0.5, 0.5, 0.5, 0.5)
+Average guess 2.8579307472141124 Win ratio:  0.9254161331626121 Parameters: (0.5, 0.5, 0.5, 0, 0.5, 0)
+Average guess 2.920097584440009 Win ratio:  0.7474018475750578 Parameters: (0, 0.5, 0, 0.5, 0.5, 0)
+Average guess 2.754534763445822 Win ratio:  0.9474237644584648 Parameters: (0, 0, 0, 0.5, 0.5, 0)
+Average guess 2.754534763445822 Win ratio:  0.9474237644584648 Parameters: (0, 0, 0, 0, 0.5, 0)
+Average guess 2.820023472279537 Win ratio:  0.9730107026523964 Parameters: (0.5, 0, 0.5, 0, 0.5, 0)
+Average guess 2.916325732000474 Win ratio:  0.7244477723698989 Parameters: (0, 0, 0.5, 0, 0.5, 0.5)
+Average guess 2.2881590309856144 Win ratio:  0.8173598553345389 Parameters: (0, 0, 0, 0, 0.5, 0.5)
+Average guess 2.8380926199785024 Win ratio:  0.9052402932392072 Parameters: (0, 0.5, 0.5, 0, 0, 0)
+Average guess 2.754534763445822 Win ratio:  0.9474237644584648 Parameters: (0, 0, 0.5, 0.5, 0.5, 0)
+Average guess 2.920648523066246 Win ratio:  0.8059462915601023 Parameters: (0.5, 0.5, 0.5, 0, 0, 0.5)
+Average guess 2.9031191012786137 Win ratio:  0.8402234636871508 Parameters: (0.5, 0.5, 0.5, 0.5, 0, 0.5)
+Average guess 2.81638690618999 Win ratio:  0.9591111111111111 Parameters: (0.5, 0, 0.5, 0.5, 0, 0)
+Average guess 2.8367080305150982 Win ratio:  0.9473029045643153 Parameters: (0.5, 0.5, 0.5, 0.5, 0, 0)
+Average guess 2.916325732000474 Win ratio:  0.7244477723698989 Parameters: (0, 0, 0.5, 0, 0, 0.5)
+Average guess 2.7606449510326536 Win ratio:  0.7591424968474149 Parameters: (0.5, 0, 0, 0, 0.5, 0.5)
+Average guess 2.754534763445822 Win ratio:  0.9474237644584648 Parameters: (0, 0, 0.5, 0, 0.5, 0)
+Average guess 2.9519944588196303 Win ratio:  0.8211046990931574 Parameters: (0.5, 0, 0, 0.5, 0.5, 0)
+Average guess 2.9700315720830965 Win ratio:  0.7498284145504461 Parameters: (0.5, 0.5, 0, 0.5, 0.5, 0)
+Average guess 2.923905818693156 Win ratio:  0.8413694721825963 Parameters: (0, 0.5, 0.5, 0, 0.5, 0.5)
+Average guess 2.754534763445822 Win ratio:  0.9474237644584648 Parameters: (0, 0, 0.5, 0.5, 0, 0)
+Average guess 2.7606449510326536 Win ratio:  0.7591424968474149 Parameters: (0.5, 0, 0, 0, 0, 0.5)
+Average guess 2.9133592389741523 Win ratio:  0.8037230568256042 Parameters: (0, 0.5, 0.5, 0.5, 0, 0.5)
+Average guess 2.913761070603756 Win ratio:  0.7846790890269151 Parameters: (0, 0, 0.5, 0.5, 0.5, 0.5)
+Average guess 2.837095191978867 Win ratio:  0.7626788036410923 Parameters: (0.5, 0, 0, 0.5, 0.5, 0.5)
+Average guess 2.8242974487419836 Win ratio:  0.900413617562838 Parameters: (0, 0.5, 0.5, 0.5, 0.5, 0)
+Average guess 2.9454958569355303 Win ratio:  0.7582685904550499 Parameters: (0, 0.5, 0, 0, 0.5, 0)
+Average guess 2.9700315720830965 Win ratio:  0.7498284145504461 Parameters: (0.5, 0.5, 0, 0.5, 0, 0)
+Average guess 2.9644758691746955 Win ratio:  0.674965034965035 Parameters: (0.5, 0.5, 0, 0, 0, 0.5)
+Average guess 2.920097584440009 Win ratio:  0.7474018475750578 Parameters: (0, 0.5, 0, 0.5, 0, 0)
+Average guess 2.9432692415329096 Win ratio:  0.8094755510514314 Parameters: (0.5, 0.5, 0, 0, 0.5, 0)
+Average guess 2.920648523066246 Win ratio:  0.8059462915601023 Parameters: (0.5, 0.5, 0.5, 0, 0.5, 0.5)
+Average guess 2.986120428243837 Win ratio:  0.6442055584687991 Parameters: (0, 0.5, 0, 0, 0, 0.5)
+Average guess 2.9432692415329096 Win ratio:  0.8094755510514314 Parameters: (0.5, 0.5, 0, 0, 0, 0)
+Average guess 2.9704322555805573 Win ratio:  0.6660533578656854 Parameters: (0, 0.5, 0, 0.5, 0, 0.5)
+Average guess 2.986120428243837 Win ratio:  0.6442055584687991 Parameters: (0, 0.5, 0, 0, 0.5, 0.5)
